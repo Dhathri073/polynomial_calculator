@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info
+*.egg
+.git/
+.gitignore
+.DS_Store
+.idea/
+.vscode/
+*.log
+__pycache__
+*.sqlite3
+*.db
+
+# ignore local environment files
+.env

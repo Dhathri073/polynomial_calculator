@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Calculator - Linked List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔢 Polynomial Calculator</h1>
+            <p class="subtitle">Using Linked List Data Structure</p>
+        </div>
+
+        <div class="content">
+            <!-- Polynomial Input Section -->
+            <div class="section">
+                <h2>Enter Polynomials</h2>
+                <div class="input-group">
+                    <label for="poly1">Polynomial 1:</label>
+                    <input type="text" id="poly1" placeholder="e.g., 3x^2 + 2x + 1" class="poly-input">
+                    <small>Format: coefficients with powers separated by spaces</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="poly2">Polynomial 2:</label>
+                    <input type="text" id="poly2" placeholder="e.g., x^2 + 4x + 5" class="poly-input">
+                    <small>Format: coefficients with powers separated by spaces</small>
+                </div>
+            </div>
+
+            <!-- Operations Section -->
+            <div class="section">
+                <h2>Operations</h2>
+                <div class="button-group">
+                    <button onclick="addPolynomials()" class="btn btn-primary">Add Polynomials</button>
+                    <button onclick="subtractPolynomials()" class="btn btn-secondary">Subtract Polynomials</button>
+                    <button onclick="multiplyPolynomials()" class="btn btn-success">Multiply Polynomials</button>
+                    <button onclick="evaluatePolynomial()" class="btn btn-info">Evaluate at x</button>
+                    <button onclick="displayStructure()" class="btn btn-warning">Show Linked List</button>
+                </div>
+            </div>
+
+            <!-- Evaluation Input -->
+            <div class="section" id="evalSection" style="display: none;">
+                <label for="evalX">Evaluate Polynomial 1 at x =</label>
+                <input type="number" id="evalX" placeholder="Enter x value" step="0.1">
+                <button onclick="performEvaluation()" class="btn btn-info">Calculate</button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="section results-section">
+                <h2>Results</h2>
+                <div id="resultDisplay" class="result-box">
+                    <p class="placeholder">Results will appear here...</p>
+                </div>
+            </div>
+
+            <!-- Linked List Visualization -->
+            <div class="section" id="visualSection" style="display: none;">
+                <h2>Linked List Structure</h2>
+                <div id="linkedListDisplay" class="linked-list-box">
+                    <p class="placeholder">Linked list visualization will appear here...</p>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="section">
+                <h2>Calculation History</h2>
+                <button onclick="clearHistory()" class="btn btn-danger">Clear History</button>
+                <div id="historyDisplay" class="history-box">
+                    <p class="placeholder">No calculations yet...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
